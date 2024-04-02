@@ -33,20 +33,13 @@
     </header>
     <div class="games">
         <div class="game">
-            <h2>Game 1</h2>
-            <p>Description of Game 1</p>
-            <button class="gameButton"><a href="gamePage1.php">Play</a></button>
+            <h1>Login</h1>
+            <div>
+                <input type="text" class="login" placeholder="Enter ID" ><i class="fa-regular fa-envelope"></i><br>
+                <input type="text" class="login" placeholder="Password"><i class="fa-solid fa-lock"></i><br>
+            <button class="gameButton"><a href="gamePage1.php">Play</a></button>    
         </div>
-        <div class="game">
-            <h2>Game 2</h2>
-            <p>Description of Game 2</p>
-            <button class="gameButton"><a href="gamePage2.php">Play</a></button>
-        </div>
-        <div class="game">
-            <h2>Game 3</h2>
-            <p>Description of Game 3</p>
-            <button class="gameButton"><a href="gamePage3.php">Play</a></button>
-        </div>
+        
     </div>
     <script src="script.js"></script>
 </body>

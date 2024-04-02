@@ -10,7 +10,9 @@
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo2.png" alt="Logo" width="200">
+            <a href="index.php">    
+                <img src="images/logo2.png" alt="Logo" width="200">
+            </a>
         </div>
         <div class="search-box">
             <input type="text" placeholder="Search...">
