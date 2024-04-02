@@ -16,6 +16,9 @@
             <input type="text" placeholder="Search...">
             <button><i class="fas fa-search"></i></button>
         </div>
+        <div class="theme">
+            <img src="images/moon.png" width="20px">
+        </div>
         <div class="login-info">
             <?php
                 session_start();
@@ -27,23 +30,25 @@
                 }
             ?>
         </div>
+        
     </header>
     <div class="games">
         <div class="game">
             <h2>Game 1</h2>
             <p>Description of Game 1</p>
-            <button>Play</button>
+            <button class="gameButton"><a href="gamePage1.php">Play</a></button>
         </div>
         <div class="game">
             <h2>Game 2</h2>
             <p>Description of Game 2</p>
-            <button>Play</button>
+            <button class="gameButton"><a href="gamePage2.php">Play</a></button>
         </div>
         <div class="game">
             <h2>Game 3</h2>
             <p>Description of Game 3</p>
-            <button>Play</button>
+            <button class="gameButton"><a href="gamePage3.php">Play</a></button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

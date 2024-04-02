@@ -1,74 +1,44 @@
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url(images/background.png);
-}
-header {
-    height: 100px;
-    color: #fff;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo {
-    display: inline-block;
-}
-.search-box {
-    flex: 1;
-    text-align: center;
-}
-.login-info {
-    display: inline-block;
-}
-.games {
-    display: flex;
-    height: 500px;
-    justify-content: space-around;
-    padding: 100px;
-}
-.game {
-    width: 25%;
-    background-image: url(images/gameBox.png);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 5px solid aqua;
-    outline: 5px solid #da4fc0;
-    text-align: center;
-}
-
-.search-button {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.search-button:hover {
-    background-color: #0056b3;
-}
-
-.search-box input[type="text"],
-.login-info a,
-.login-info button {
-    border-radius: 30px;
-    border: 3px solid #da4fc0;
-    background-color: transparent;
-    padding: 10px 20px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.search-box button{
-    border-radius: 100%;
-    padding: 10px;
-    background-color: transparent;
-    border: 2px solid purple;
-    color: purple;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="main.css">
+<title>My Game Website</title>
+<script src="https://kit.fontawesome.com/977a29eff2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo2.png" alt="Logo" width="200">
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="theme">
+            <img src="images/moon.png" width="20px">
+        </div>
+        <div class="login-info">
+            <?php
+                session_start();
+                if(isset($_SESSION['username'])) {
+                    echo '<span>Welcome, '.$_SESSION['username'].'!</span>';
+                    echo '<button>Logout</button>';
+                } else {
+                    echo '<a href="login.php">Login</a>';
+                }
+            ?>
+        </div>
+        
+    </header>
+    <div class="games">
+        <div class="game">
+            <h2>Game 1</h2>
+            <p>Description of Game 1</p>
+            <button class="gameButton"><a href="gamePage1">Play</a></button>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

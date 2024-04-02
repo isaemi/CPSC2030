@@ -20,14 +20,21 @@ header {
     flex: 1;
     text-align: center;
 }
+.theme{
+    padding: 15px;
+    margin: 15px;
+    border: 5px solid black;
+}
 .login-info {
     display: inline-block;
+    margin-right: 20px;
 }
 .games {
     display: flex;
+    flex-wrap: wrap;
     height: 500px;
     justify-content: space-around;
-    padding: 100px;
+    padding: 20px;
 }
 .game {
     width: 25%;
@@ -40,20 +47,15 @@ header {
     text-align: center;
 }
 
-.search-button {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+.gameButton{
+    border-radius: 30px;
+    padding: 10px;
+    border: 3px solid #da4fc0;
+    background-color: white;
+    color: purple;
+    margin-top: 50px;
+    text-align: center;
 }
-
-.search-button:hover {
-    background-color: #0056b3;
-}
-
 .search-box input[type="text"],
 .login-info a,
 .login-info button {
@@ -64,10 +66,16 @@ header {
     color: #fff;
     cursor: pointer;
 }
-
 .search-box button{
     border-radius: 100%;
     padding: 10px;
+    background-color: transparent;
+    border: 2px solid purple;
+    color: purple;
+}
+.theme{
+    border-radius: 100%;
+    padding: 5px;
     background-color: transparent;
     border: 2px solid purple;
     color: purple;
