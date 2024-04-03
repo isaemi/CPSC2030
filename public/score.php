@@ -20,7 +20,17 @@
         </div>
         <div class="login-info">
             <?php
-                session_start();
+                    session_start();
+                    if(isset($_SESSION['username'])) {
+                        echo '<span>Welcome, '.$_SESSION['username'].'!</span>';
+                        echo '<button>Score</button>';
+                    } else {
+                        echo '<a href="score.php">Score</a>';
+                    }
+            ?>
+        </div>
+        <div class="login-info">
+            <?php
                 if(isset($_SESSION['username'])) {
                     echo '<span>Welcome, '.$_SESSION['username'].'!</span>';
                     echo '<button>Logout</button>';
