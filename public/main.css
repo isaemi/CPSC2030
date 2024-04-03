@@ -16,10 +16,6 @@ header {
 .logo {
     display: inline-block;
 }
-.search-box {
-    flex: 1;
-    text-align: center;
-}
 
 .login-info {
     display: inline-block;
@@ -70,13 +66,7 @@ header {
     border: 2px solid purple;
     color: purple;
 }
-.theme{
-    border-radius: 100%;
-    padding: 5px;
-    background-color: transparent;
-    border: 2px solid purple;
-    color: purple;
-}
+
 .login{
     margin: 20px;
     padding: 20px;

@@ -41,6 +41,6 @@
             <button class="gameButton"><a href="gamePage1">Play</a></button>
         
     </div>
-    <script src="script.js"></script>
+    <script src="script1.js"></script>
 </body>
 </html>

@@ -20,17 +20,7 @@
         </div>
         <div class="login-info">
             <?php
-                    session_start();
-                    if(isset($_SESSION['username'])) {
-                        echo '<span>Welcome, '.$_SESSION['username'].'!</span>';
-                        echo '<button>Score</button>';
-                    } else {
-                        echo '<a href="score.php">Score</a>';
-                    }
-            ?>
-        </div>
-        <div class="login-info">
-            <?php
+                session_start();
                 if(isset($_SESSION['username'])) {
                     echo '<span>Welcome, '.$_SESSION['username'].'!</span>';
                     echo '<button>Logout</button>';
@@ -43,20 +33,12 @@
     </header>
     <div class="games">
         <div class="game">
-            <h2>Game 1</h2>
-            <p>Description of Game 1</p>
-            <button class="gameButton"><a href="gamePage1.php">Play</a></button>
+            <h1>Score</h1>
+            <div>
+                
+            <button class="gameButton"><a href="gamePage1.php">Play</a></button>    
         </div>
-        <div class="game">
-            <h2>Game 2</h2>
-            <p>Description of Game 2</p>
-            <button class="gameButton"><a href="gamePage2.php">Play</a></button>
-        </div>
-        <div class="game">
-            <h2>Game 3</h2>
-            <p>Description of Game 3</p>
-            <button class="gameButton"><a href="gamePage3.php">Play</a></button>
-        </div>
+        
     </div>
     <script src="script.js"></script>
 </body>
