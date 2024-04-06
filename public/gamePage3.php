@@ -39,6 +39,19 @@
     </header>
     <div class="games">
         <div class="game">
+    <h1>Welcome to Hangman!</h1>
+    <div id="game">
+        <p id="gameBoard"></p>
+        <p id="message"></p>
+        <p id="guesses"></p>
+        <input type="text" id="guessInput" placeholder="Enter your guess">
+        <button onclick="makeGuess()">Guess</button>
+    </div>
+    <br>
+    <br>
+    <canvas id="hangmanCanvas" width="400" height="400"></canvas>
+
+
          </div>
     </div>
     <script src="script3.js"></script>
