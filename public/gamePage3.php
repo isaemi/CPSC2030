@@ -41,6 +41,6 @@
         <div class="game">
          </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script3.js"></script>
 </body>
 </html>
