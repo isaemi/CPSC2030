@@ -13,9 +13,23 @@
         justify-content: space-between;
         align-items: center;
     }
-    .logo {
-        display: inline-block;
-    }
+    .search-box input[type="text"],
+.login-info a,
+.login-info button {
+    border-radius: 30px;
+    border: 3px solid #da4fc0;
+    background-color: transparent;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.search-box button{
+    border-radius: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid purple;
+    color: purple;
+}
     .games {
         display: flex;
         flex-wrap: wrap;
@@ -26,7 +40,6 @@
     .game {
         width: 400px;
         background-image: url(images/gameBox.png);
-        padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border: 5px solid aqua;
@@ -42,7 +55,6 @@
         margin-top: 50px;
         text-align: center;
     }
-    .search-box input[type="text"],
     .login-info a,
     .login-info button {
         border-radius: 30px;
@@ -51,13 +63,7 @@
         padding: 10px 20px;
         color: #fff;
         cursor: pointer;
-    }
-    .search-box button {
-        border-radius: 100%;
-        padding: 10px;
-        background-color: transparent;
-        border: 2px solid purple;
-        color: purple;
+        margin: 20px;
     }
     .login {
         margin: 20px;

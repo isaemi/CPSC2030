@@ -16,7 +16,10 @@
                 <img src="images/logo2.png" alt="Logo" width="200">
             </a>
         </div>
-
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
         <div class="login-info">
             <?php
 
