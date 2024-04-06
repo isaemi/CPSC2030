@@ -17,7 +17,7 @@
         <div class="search-box">
             <input type="text" placeholder="Search...">
             <button><i class="fas fa-search"></i></button>
-        </div>s
+        </div>
         <div class="login-info">
             <?php
 
@@ -40,10 +40,10 @@
     </header>
     <div class="games">
         <div class="game">
-            <h1>Login</h1>
+            <h1>Register</h1>
             <div>
-                <input type="text" class="login" placeholder="Enter ID" ><i class="fa-regular fa-envelope"></i><br>
-                <input type="text" class="login" placeholder="Password"><i class="fa-solid fa-lock"></i><br>
+                <input type="text" class="login" placeholder="Enter ID" ><br>
+                <input type="text" class="login" placeholder="Password"><br>
             <button class="gameButton"><a href="gamePage1.php">Play</a></button>    
         </div>
         

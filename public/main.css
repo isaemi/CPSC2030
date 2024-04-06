@@ -13,23 +13,7 @@
         justify-content: space-between;
         align-items: center;
     }
-    .search-box input[type="text"],
-.login-info a,
-.login-info button {
-    border-radius: 30px;
-    border: 3px solid #da4fc0;
-    background-color: transparent;
-    padding: 10px 20px;
-    color: #fff;
-    cursor: pointer;
-}
-.search-box button{
-    border-radius: 100%;
-    padding: 10px;
-    background-color: transparent;
-    border: 2px solid purple;
-    color: purple;
-}
+    
     .games {
         display: flex;
         flex-wrap: wrap;
@@ -41,29 +25,41 @@
         width: 400px;
         background-image: url(images/gameBox.png);
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border: 5px solid aqua;
-        outline: 5px solid #da4fc0;
+        box-shadow: inset 0px 0px 10px 10px yellow,
+        0 0 0 10px aqua,
+        0 0 0 20px #EC297B,
+        0 2px 5px 25px rgba(0,0,0,.6);
         text-align: center;
     }
-    .gameButton {
+    .game img{
+        margin-top: 150px;
+    }
+    .gameButton,
+    .login {
         border-radius: 30px;
         padding: 10px;
-        border: 3px solid #da4fc0;
+        border: 3px solid #EC297B;
         background-color: white;
-        color: purple;
         margin-top: 50px;
         text-align: center;
     }
+    .search-box input[type="text"],
     .login-info a,
     .login-info button {
         border-radius: 30px;
-        border: 3px solid #da4fc0;
+        border: 3px solid #EC297B;
         background-color: transparent;
         padding: 10px 20px;
         color: #fff;
         cursor: pointer;
-        margin: 20px;
+        margin: 10px;
+    }
+    .search-box button {
+        border-radius: 100%;
+        padding: 10px;
+        background-color: transparent;
+        border: 2px solid #EC297B;
+        color: #EC297B;
     }
     .login {
         margin: 20px;
@@ -72,4 +68,6 @@
         width: 200px;
         display: flex;
         background-color: rgba(255, 255, 255, 0.3);
+        align-items: center;
+        
     }

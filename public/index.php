@@ -41,8 +41,9 @@
     </header>
     <div class="games">
         <div class="game">
-            <h2>Game 1</h2>
-            <p>Description of Game 1</p>
+            <img src="images/game1.png" alt="Logo">
+            <br>
+            <a href="gamePage1.php">
             <button class="gameButton"><a href="gamePage1.php">Play</a></button>
         </div>
         <div class="game">
@@ -51,8 +52,8 @@
             <button class="gameButton"><a href="gamePage2.php">Play</a></button>
         </div>
         <div class="game">
-            <h2>Game 3</h2>
-            <p>Description of Game 3</p>
+        <img src="images/game3.png" alt="Logo">
+        <br>
             <button class="gameButton"><a href="gamePage3.php">Play</a></button>
         </div>
     </div>
