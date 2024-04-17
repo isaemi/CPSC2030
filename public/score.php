@@ -41,7 +41,12 @@
     <div class="games">
         <div class="game">
             <h1>Score</h1>
-            <div>
+            <?php session_start();
+                if (isset($_SESSION['username'])) {
+                    // Assuming your score is stored in a session variable named 'score'
+                    echo '<p>Your Score: ' . $_SESSION['score'] . '</p>';
+                }
+            ?>
                 
             <button class="gameButton"><a href="gamePage1.php">Play</a></button>    
         </div>
