@@ -22,22 +22,24 @@
         </div>
         <div class="login-info">
             <?php
-
-            session_start();
-            if (isset($_SESSION['username'])) {
-                echo '<span>Welcome, ' . $_SESSION['username'] . '!</span>';
-                echo '<button>Score</button>';
-            } else {
-                echo '<a href="score.php">Score</a>';
-            }
-            if (isset($_SESSION['username'])) {
-                echo '<span>Welcome, ' . $_SESSION['username'] . '!</span>';
-                echo '<button>Logout</button>';
-            } else {
-                echo '<a href="login.php">Login</a>';
-            }
-            ?>
+        session_start();
+        if(isset($_SESSION['username'])) {
+            echo 'Logged in as ' . $_SESSION['username'];
+            echo '<a href="logout.php">Logout</a>';
+        } else {
+        ?>
+            <form action="login.php" method="post">
+            <label for="username">UserName:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <a href="#" onclick="window.open('create_account.php', 'newwindow', 'width=600,height=400'); return false;">Create Account</a>
+            </form>
+        <?php
+        }
+        ?>
         </div>
+        
     </header>
     <div class="games">
         <div class="game">
@@ -47,8 +49,8 @@
             <button class="gameButton"><a href="gamePage1.php">Play</a></button>
         </div>
         <div class="game">
-            <h2>Game 2</h2>
-            <p>Description of Game 2</p>
+        <img src="images/game2.png" alt="Logo">
+        <br>
             <button class="gameButton"><a href="gamePage2.php">Play</a></button>
         </div>
         <div class="game">

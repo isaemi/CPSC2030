@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="main.css">
-<title>My Game Website</title>
-<script src="https://kit.fontawesome.com/977a29eff2.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>CPSC Final Project</title>
+    <script src="https://kit.fontawesome.com/977a29eff2.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <a href="index.php">    
+            <a href="index.php">
                 <img src="images/logo2.png" alt="Logo" width="200">
             </a>
         </div>
@@ -36,12 +38,20 @@
             }
             ?>
         </div>
-        
+
     </header>
     <div class="games">
         <div class="game">
+            <div class="game-board">
+                <p>Score: <span id="score">0</span></p>
+                <p>High Score: <span id="highScore">0</span></p>
+                <br>
+                <div id="gameBoard" class="game-board"></div>
+                <button id="startButton">Start Game</button>
+            </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
+
 </html>
