@@ -1,33 +1,29 @@
 <?php
 session_start();
-include "db_conn.php";
 
-if(isset($_POST['username']) && isset($_POST['password'])) {
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "project_db";
 
-    function validate($data){
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
-$uname = validate($_POST['username']);
-$pass = validate($_POST['password']);
+// Get form data
+$form_username = $_POST['username'];
+$form_password = $_POST['password'];
 
+$_POST['username'] = "";
+$_POST['password'] = "";
 
-if(empty($username)){
-    header ("Location: index.php?erro=User Name is required");
-    exit();
-}
-else if(empty($pass)){
-    header("Location: index.php?error=Password is required");
-    exit(); 
-}
-
-$sql = "SELECT * FROM user WHERE username = '$username' AND password ='$password'";
-$result = mysqli_query($conn, $sql);
-
+// Query the database
+$sql = "SELECT * FROM user WHERE username='$form_username'";
+$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
