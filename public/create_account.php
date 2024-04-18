@@ -13,7 +13,6 @@
         <label for="password">Choose a password:</label><br>
         <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
         <?php
-        session_start();
         if(isset($_SESSION["error"])) {
             echo '<span class="error">' . $_SESSION["error"] . '</span>';
             unset($_SESSION["error"]);

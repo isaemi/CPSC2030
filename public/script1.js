@@ -42,17 +42,16 @@ function Bullet() {
 
 function sendScoreToPHP(score) {
     var xhr = new XMLHttpRequest();
-    var url = 'score.php';
-    var params = 'score=' + score;
-    xhr.open('POST', url, true);
-    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+   
+    xhr.open('POST', 'score.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            // Handle the response if needed
-            console.log(xhr.responseText);
+            var phpVariable = xhr.responseText; 
+            console.log(phpVariable);
         }
     };
-    xhr.send(params);
+    xhr.send('score=' + score);
 }
 
 function generateRandomValue(min, max) {
@@ -72,7 +71,7 @@ function Enemy() {
         this.y += 5;
         if (this.y >= canvas.height - 64) {
             gameOver = true;
-            sendScoreToPHP(score);
+            
         }
     }
 }

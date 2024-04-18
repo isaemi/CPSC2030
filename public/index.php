@@ -21,14 +21,6 @@
             <button><i class="fas fa-search"></i></button>
         </div>
         <div class="login-info">
-            <?php
-            session_start();
-            if(isset($_SESSION['username'])) {
-                echo "<p>Hi, " . htmlspecialchars($_SESSION['username']) . "!</p>"; // Safe output using htmlspecialchars
-                echo "<button onclick='location.href=\"score.php\"'>Score</button>"; // Score button (update href as necessary)
-                echo "<a href='logout.php'>Logout</a>"; // Logout link
-            } else {
-            ?>
                 <form action="login.php" method="post">
                     <label for="username">UserName:</label><br>
                     <input type="text" id="username" name="username"><br>
@@ -37,9 +29,7 @@
                     <a href="#" onclick="window.open('create_account.php', 'newwindow', 'width=600,height=400'); return false;">Create Account</a>
                     <input type="submit" id="login" value="Login">
                 </form>
-            <?php
-            }
-            ?>
+
         </div>
     </header>
     <div class="games">

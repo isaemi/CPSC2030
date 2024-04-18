@@ -18,9 +18,6 @@ if ($conn->connect_error) {
 $form_username = $_POST['username'];
 $form_password = $_POST['password'];
 
-$_POST['username'] = "";
-$_POST['password'] = "";
-
 // Query the database
 $sql = "SELECT * FROM user WHERE username='$form_username'";
 $result = $conn->query($sql);
