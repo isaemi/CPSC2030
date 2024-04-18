@@ -20,14 +20,14 @@
             <input type="text" placeholder="Search...">
             <button><i class="fas fa-search"></i></button>
         </div>
-        <div class="login-info">
+        <div class="login">
                 <form action="login.php" method="post">
                     <label for="username">UserName:</label><br>
                     <input type="text" id="username" name="username"><br>
                     <label for="password">Password:</label><br>
                     <input type="password" id="password" name="password"><br>
-                    <a href="#" onclick="window.open('create_account.php', 'newwindow', 'width=600,height=400'); return false;">Create Account</a>
                     <input type="submit" id="login" value="Login">
+                    <a href="#" onclick="window.open('create_account.php', 'newwindow', 'width=600,height=400'); return false;">Create Account</a><br>
                 </form>
 
         </div>

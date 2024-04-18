@@ -24,13 +24,13 @@
             session_start();
             if (isset($_SESSION['username'])) {
                 echo '<span>Welcome, ' . $_SESSION['username'] . '!</span>';
-                echo '<button class=>Score</button>';
+                echo '<button">Score</button>';
             } else {
                 echo '<a href="score.php">Score</a>';
             }
             if (isset($_SESSION['username'])) {
                 echo '<span>Welcome, ' . $_SESSION['username'] . '!</span>';
-                echo '<button>Logout</button>';
+                echo '<button">Logout</button>';
             } else {
                 echo '<a href="login.php">Login</a>';
             }

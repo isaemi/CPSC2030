@@ -21,6 +21,23 @@
             <button><i class="fas fa-search"></i></button>
         </div>
         <div class="login-info">
+        <div class="login-info">
+            <?php
+
+            session_start();
+            if (isset($_SESSION['username'])) {
+                echo '<span>Welcome, ' . $_SESSION['username'] . '!</span>';
+                echo '<button class="log">Score</button>';
+            } else {
+                echo '<a href="score.php">Score</a>';
+            }
+            if (isset($_SESSION['username'])) {
+                echo '<span>Welcome, ' . $_SESSION['username'] . '!</span>';
+                echo '<button class="log">Logout</button>';
+            } else {
+                echo '<a href="login.php">Login</a>';
+            }
+            ?>
         </div>
 
     </header>
@@ -29,6 +46,7 @@
             <h1>Score</h1>
 
             <?php
+            
             require ('../model/database.php');
 
             function print_scores($scores) {

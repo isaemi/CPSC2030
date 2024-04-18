@@ -49,7 +49,7 @@
     </div>
     <br>
     <br>
-    <canvas id="hangmanCanvas" width="400" height="400"></canvas>
+    <canvas id="hangmanCanvas" width="300" height="200"></canvas>
 
 
          </div>
