@@ -45,9 +45,9 @@
             <div class="game-board">
                 <p>Score: <span id="score">0</span></p>
                 <p>High Score: <span id="highScore">0</span></p>
+                <button id="startButton">Start Game</button><br>
                 <br>
                 <div id="gameBoard" class="game-board"></div>
-                <button id="startButton">Start Game</button>
             </div>
         </div>
     </div>

@@ -44,13 +44,11 @@
     <div class="games">
         <div class="game">
             <h1>Score</h1>
-
             <?php
             
             require ('../model/database.php');
 
             function print_scores($scores) {
-                echo '<br><h2>Berry Adventures!</h2>';
                 echo '<table border="1">
                         <tr>
                             <th>Game Name</th>
@@ -66,23 +64,18 @@
                 }
                 echo '</table>';
             }
-            
-            // Dynamic query using MySQLi
 
             $query = "SELECT * FROM score ORDER BY score DESC";
             $result = $conn->query($query);
             
-            // Check if the query executed successfully
             if ($result == false) {
                 $error_message = $db->error;
                 echo "<p>An error occurred: $error_message</p>";
             } else {
                 $scores = $result->fetch_all(MYSQLI_ASSOC);
-                // Display the result
+
                 print_scores($scores);
-            }
-            
-            
+            }    
             ?>
         </div>
 
@@ -92,7 +85,7 @@
 
 </html>
 
-<!-- 
+<!--
   session_start();
   if (isset($_SESSION['score'])) {
   echo '<p>Your Score: ' . $_SESSION['score'] . '</p>';

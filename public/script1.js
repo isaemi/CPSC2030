@@ -171,6 +171,13 @@ function restartGame() {
     createEnemy();
 }
 
+document.addEventListener("click", function (event) {
+    if (gameOver) {
+        restartGame();
+        requestAnimationFrame(main);
+    }
+});
+
 function main() {
     if (!gameOver) {
         update();

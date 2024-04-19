@@ -1,4 +1,3 @@
-// Define an array of words
 const words = [
   "hangman",
   "computer",

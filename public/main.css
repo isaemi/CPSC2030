@@ -40,10 +40,21 @@ header {
     padding: 10px;
     border: 3px solid #EC297B;
     background-color: white;
+    box-shadow: inset 0px 0px 5px 5px yellow,
+    0 0 0 10px aqua,
+    0 0 0 20px #EC297B,
+    0 2px 5px 25px rgba(0,0,0,.6);
     margin-top: 50px;
     text-align: center;
 }
 
+.gameButton a{
+    color: #EC297B;
+}
+
+.gameButton:hover{
+    background-color: yellow;
+}
 .score a,
 .login button,
 .search-box input[type="text"]{
@@ -66,29 +77,19 @@ header {
 }
 .login {
     margin: 20px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 30px;
-    width: 200px;
     display: flex;
+    color: white;
     background-color: rgba(255, 255, 255, 0.3);
     align-items: center;
-    
 }
-
-.card {
-    width: 80px;
-    height: 80px;
-    background-color: lightblue;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    cursor: pointer;
+#create{
+    color: #EC297B;
 }
-
-.card.active {
-    background-color: dodgerblue;
+#click{
+    color: #EC297B;
+    margin: 10px;
 }
 
 .game-board {
@@ -96,38 +97,28 @@ header {
     grid-template-columns: repeat(3, 100px);
     grid-gap: 5px;
     justify-content: center;
-    margin: auto;
+    margin-top: 30px;
+
 }
 
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #ddd;
+    background-color: transparent;
     border: 1px solid #999;
     position: relative;
     cursor: pointer;
 }
 
 .cell.active {
-    background-color: red;
+    background-color: #EC297B;
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
 #startButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    margin-top: 300px;
+    background-color: pink;
+    border-color: #EC297B;
+    border-radius: 30px;
+    
 }
 
 #startButton:hover {
@@ -141,11 +132,38 @@ button {
 }
 
 .login-info a, .login-info button {
-    color: #EC297B; /* corrected color code */
+    color: #EC297B;
     padding: 10px 20px;
-    border-radius: 30px; /* matching other interactive elements */
+    border-radius: 30px;
     background-color: transparent;
     border: 2px solid #EC297B;
     margin: 10px;
     cursor: pointer;
+}
+
+#message{
+    background-color: pink;
+}
+#hangmanCanvas{
+    background-color: white;
+    border-radius: 30px;
+}
+
+table {
+    width: 100%; 
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 6px;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }

@@ -34,7 +34,7 @@ function startGame() {
     setTimeout(() => {
         clearInterval(gameTimer);
         startButton.disabled = false;
-    }, 15000); // Run the game for 15 seconds
+    }, 20000); // Run the game for 20 seconds
 }
 
 function activateRandomCell() {

@@ -21,16 +21,24 @@
             <button><i class="fas fa-search"></i></button>
         </div>
         <div class="login">
-                <form action="login.php" method="post">
-                    <label for="username">UserName:</label><br>
-                    <input type="text" id="username" name="username"><br>
-                    <label for="password">Password:</label><br>
-                    <input type="password" id="password" name="password"><br>
-                    <input type="submit" id="login" value="Login">
-                    <a href="#" onclick="window.open('create_account.php', 'newwindow', 'width=600,height=400'); return false;">Create Account</a><br>
-                </form>
-
-        </div>
+        <?php
+        session_start();
+        if (isset($_SESSION['username'])) {
+            echo '<p>Welcome, ' . htmlspecialchars($_SESSION['username']) . '!</p>';
+            echo '<a href="logout.php">Logout</a>';
+        } else {
+            ?>
+            <form action="login.php" id="login" method="post">
+                <label for="username">User Name:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <input type="submit" id="click" value="Login">
+                <a href="#" id="create" onclick="window.open('create_account.php', 'newwindow', 'width=600,height=400'); return false;">Create Account</a><br>
+            </form>
+            <?php
+        }
+        ?>
     </header>
     <div class="games">
         <div class="game">

@@ -22,8 +22,8 @@ $form_password = $_POST['password'];
 $sql = "SELECT * FROM user WHERE username='$form_username'";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    // output data of each row
+if ($result->num_rows == 0) {
+
     while($row = $result->fetch_assoc()) {
         if(password_verify($form_password, $row["password"])) {
             $_SESSION["user_id"] = $row["id"];
